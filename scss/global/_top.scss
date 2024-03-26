@@ -1,0 +1,77 @@
+.top {
+  padding: 80px 0;
+  @include media(850) {
+    padding: 20px 0;
+  }
+  &-title-button {
+    @include flex(center, space-between);
+    padding-bottom: 50px;
+  }
+  &-title {
+    font-weight: 600;
+    font-size: 39px;
+    color: $black-color;
+    @include media(600) {
+      font-size: 25px;
+    }
+  }
+  &-color-dastur {
+    color: $button-color;
+    @include media(600) {
+      color: $black-color;
+    }
+  }
+
+  &-button {
+    border: 1px solid #555351;
+    border-radius: 8px;
+    padding: 18px 36px;
+    width: 141px;
+    height: 55px;
+    background: $white-color;
+    font-weight: 600;
+    font-size: 16px;
+    color: $active-link;
+    transition: all 0.3s;
+    @include media(600) {
+      width: 117px;
+      height: 43px;
+      padding: 12px 24px;
+    }
+  }
+  &-button:hover {
+    background-color: $button-color;
+    color: $white-color;
+  }
+
+  &-cities {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex-wrap: wrap;
+    @include media(1000) {
+      gap: 8px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    }
+  }
+  &-city-row {
+    @include flex(center, center);
+    gap: 24px;
+    width: 100%;
+
+    @include media(1000) {
+      gap: 8px;
+    }
+  }
+
+  &-city-image {
+    width: 337px;
+  }
+  &-city-image img {
+    width: 100%;
+    height: 100%;
+  }
+}

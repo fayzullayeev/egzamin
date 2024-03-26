@@ -1,0 +1,15 @@
+.banner {
+  margin-top: 80px;
+  @include media(850) {
+    margin-top: 20px;
+  }
+  &-picture {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+  }
+  &-picture img {
+    width: 100%;
+  }
+}

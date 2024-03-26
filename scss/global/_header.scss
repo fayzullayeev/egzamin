@@ -1,0 +1,81 @@
+.header {
+  padding: 10px 0;
+  &-row {
+    @include flex(center, space-between);
+  }
+  &-logo {
+    width: 110px;
+    height: 79px;
+    @include media(600) {
+      width: 59px;
+      height: 43px;
+    }
+  }
+  &-logo img {
+    width: 100%;
+    height: 100%;
+  }
+  &-links {
+    @include flex(center, center);
+    @include media(790) {
+      display: none;
+    }
+  }
+  &-links :not(:last-child) {
+    margin-right: 48px;
+    @include media(880) {
+      margin-right: 12px;
+    }
+  }
+  &-link {
+    color: $link-color;
+  }
+  &-buttons {
+    @include flex(center, center);
+    gap: 12px;
+  }
+  &-button-ariza {
+    border-radius: 8px;
+    padding: 18px 36px;
+    width: 186px;
+    height: 55px;
+    background: $button-color;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    transition: all 0.3s;
+    border: 1px solid $button-color;
+    @include media(600) {
+      width: 156px;
+      height: 43px;
+      font-weight: 400;
+      font-size: 16px;
+      padding: 0;
+    }
+  }
+  &-button-ariza:hover {
+    background-color: transparent;
+    color: $button-color;
+  }
+  &-button-lang {
+    @include flex(center, center);
+    border: 1px solid #555351;
+    border-radius: 8px;
+    padding: 18px;
+    width: 83px;
+    height: 55px;
+    background: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    color: #555351;
+    @include media(600) {
+      display: none;
+    }
+  }
+  &-button-menu {
+    display: none;
+    @include media(790) {
+      display: block;
+    }
+  }
+}
